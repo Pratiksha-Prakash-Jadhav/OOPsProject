@@ -15,7 +15,7 @@ public class Main {
 		System.out.println("Enter Your Choice");
 		int choice=sc.nextInt();
 		
-		System.out.println("How many number we wont to calculate");
+		System.out.println("How many number we wont to calculate 2/3/4/5");
 		int count=sc.nextInt();
 		
 		int result=0;
