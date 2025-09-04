@@ -3,8 +3,8 @@ package OOPsBasicProject;
 import java.util.Scanner;
 
 public class Main {
-        
-public static void main(String[] args) {
+
+	public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Choice Options");
@@ -20,115 +20,100 @@ public static void main(String[] args) {
 		
 		int result=0;
 		
+		int[] num=new int[count];
+		System.out.println("Enter your number: ");
+		for(int i=0;i<count;i++)
+		{
+			int b = i +1;
+			num[i]=sc.nextInt();
+		}
+		
 		switch(choice)
 		{
 		case 1:{
+			
 			CalAddition addition;
 			addition=new CalAddition();
-		      switch(count)
+			
+		      if(count==2)
 		         {
-		             case 2:
-		            {
-						result=addition.addition(12,12);
+						result=addition.addition(num[0],num[1]);
 						System.out.println("Addition is: "+result);
-						break;
 					}
-					case 3:
+		      else if(count==3)
 					{
-						result=addition.addition(12,12,12);
+						result=addition.addition(num[0],num[1],num[2]);
 						System.out.println("Addition is: "+result);
-						break;
 					}
-					case 4:
+		      else if(count==4)
 					{
-						result=addition.addition(12,12,12,12);
+		    	       result=addition.addition(num[0],num[1],num[2],num[3]);
 						System.out.println("Addition is: "+result);
-						break;
 					}
-					case  5:
+		      else if(count==5)
 					{
-						result=addition.addition(12,12,12,12,12);
+		    	       result=addition.addition(num[0],num[1],num[2],num[3],num[4]);
 						System.out.println("Addition is: "+result);
-						break;
 					}
-					default:
-						System.out.println("Invalid Input");			
-				    }
 				 }break;
 		case 2:
 		{
 			CalSubstraction substraction;
 			substraction=new CalSubstraction();
-			     switch(count)
-			     {
-			     case 2:
+			   if(count==2)
 					{
-						result=substraction.substraction(12,12);
+				        result=substraction.substraction(num[0],num[1]);
 						System.out.println("Substraction is: "+result);
-						break;
 					}
-			     case 3:
+			   else if(count==3)
 			     {
-			    	 result=substraction.substraction(12,2,1);
+				        result=substraction.substraction(num[0],num[1],num[2]);
 						System.out.println("Substraction is: "+result);
-						break;
 			     }
-			     case 4:
+			   else if(count==4)
 			     {
-			    	 result=substraction.substraction(12,2,1,0);
+				         result=substraction.substraction(num[0],num[1],num[2],num[3]);
 						System.out.println("Substraction is: "+result);
-						break;
 			     }
-			     case 5:
-			     {
-			    	 result=substraction.substraction(12,2,1,0,5);
+			   else if(count==5)
+			     {      
+				        result=substraction.substraction(num[0],num[1],num[2],num[3],num[4]);
 						System.out.println("Substraction is: "+result);
-						break;
 			      }
-			     default:
-						System.out.println("Invalid Input");			
-				    
-			    }
 		    }break;
-		    
+	
 		case 3:
 		{
 			CalMultiplication multiplication;
 			multiplication=new CalMultiplication();
 			
-			switch(count)
+		   if(count==2)
 			{
-			case 2:
-			{
-				result=multiplication.multiplication(2,2);
+			    result=multiplication.multiplication(num[0], num[1]);
 				System.out.println("Multiplication is: "+result);
-				break;
 			}
-			case 3:
+		   else if(count==3)
 			{
-				result=multiplication.multiplication(2,2,2);
+			   result=multiplication.multiplication(num[0], num[1],num[2]);
 				System.out.println("Multiplication is: "+result);
-				break;
 			}
-			case 4:
+		   else if(count==4)
 			{
-				result=multiplication.multiplication(2,2,2,2);
+			   result=multiplication.multiplication(num[0], num[1],num[2],num[3]);
 				System.out.println("Multiplication is: "+result);
-				break;
 			}
-			case 5:
+		   else if(count==5)
 			{
-				result=multiplication.multiplication(2,2,2,2,2);
+			   result=multiplication.multiplication(num[0], num[1],num[2],num[3],num[4]);
 				System.out.println("Multiplication is: "+result);
-				break;
 			}
-			default:
-				System.out.println("Invalid Input");			
-		  }
 		}break;
+		
 		default:
 			System.out.println("Invalid Input");			
 	    
       }
 	}
 }
+
+

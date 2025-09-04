@@ -22,4 +22,6 @@ public class CalSubstraction extends Calculator {
 	{
 		return a-b-c-d-e;
 	}
+	
+	
 }

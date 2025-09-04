@@ -22,4 +22,7 @@ public class CalMultiplication extends Calculator {
 	{
 		return a*b*c*d*e;
 	}
+
+//	Calculator c;
+//	((CalAddition)c).addition(tem[0], result, choice, count, result)
 }
