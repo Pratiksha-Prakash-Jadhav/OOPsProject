@@ -4,116 +4,144 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Choice Options");
 		System.out.println("1.Addition");
 		System.out.println("2.Substraction");
 		System.out.println("3.Multiplication");
+		System.out.println("4.Exit");
 		
-		System.out.println("Enter Your Choice");
 		int choice=sc.nextInt();
 		
-		System.out.println("How many number we wont to calculate 2/3/4/5");
+		System.out.println("How many number we wont to calculate");
 		int count=sc.nextInt();
 		
-		int result=0;
-		
-		int[] num=new int[count];
-		System.out.println("Enter your number: ");
-		for(int i=0;i<count;i++)
-		{
-			int b = i +1;
-			num[i]=sc.nextInt();
+		Calculator calculator;
+		// operation id = 1 or = 2 and nov =2
+		if (count == 2) {
+			if (choice == 1) 
+			{
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				calculator = new CalAddition();
+				System.out.println("Addition is: "+calculator.addition(a, b));
+			} 
+			else if (choice == 2) 
+			{
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				calculator = new CalSubstraction();
+				System.out.println("Substraction is: "+calculator.substraction(a, b));
+			}
+			else if(choice==3)
+			{
+				int a=sc.nextInt();
+				int b=sc.nextInt();
+				calculator=new CalMultiplication();
+				System.out.println("Multiplication is: "+calculator.multiplication(a, b));
+			}
 		}
+		else if(count > 2 && count < 6) {
+			if(choice == 1) {
+				CalAddition addition = new CalAddition();
+				
+				switch(count)
+				{
+				case 3:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					System.out.println("Addition is: "+addition.addition(a, b, c));
+				}break;
+				case 4:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					System.out.println("Addition is: "+addition.addition(a, b, c,d));
+				}break;
+				case 5:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					int e=sc.nextInt();
+					System.out.println("Addition is: "+addition.addition(a, b, c,d,e));
+				}
+				}
+				
+			}
+			else if(choice == 2) {
+				CalSubstraction substraction = new CalSubstraction();
+				switch(count)
+				{
+				case 3:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					System.out.println("Substraction is: "+substraction.substraction(a, b, c));
+				}break;
+				case 4:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					System.out.println("Substraction is: "+substraction.substraction(a, b, c,d));
+				}break;
+				case 5:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					int e=sc.nextInt();
+					System.out.println("Substraction is: "+substraction.substraction(a, b, c,d,e));
+				}
+				}
+
+			}
+			else if(choice == 3)
+			{
+				CalMultiplication multiplication=new CalMultiplication();
+				switch(count)
+				{
+				case 3:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					System.out.println("Multiplication is: "+multiplication.multiplication(a, b, c));
+				}break;
+				case 4:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					System.out.println("Multiplication is: "+multiplication.multiplication(a, b, c,d));
+				}break;
+				case 5:
+				{
+					int a=sc.nextInt();
+					int b=sc.nextInt();
+					int c=sc.nextInt();
+					int d=sc.nextInt();
+					int e=sc.nextInt();
+					System.out.println("Multiplication is: "+multiplication.multiplication(a, b, c,d,e));
+				}
+				}
+				}
+			}
 		
-		switch(choice)
-		{
-		case 1:{
-			
-			CalAddition addition;
-			addition=new CalAddition();
-			
-		      if(count==2)
-		         {
-						result=addition.addition(num[0],num[1]);
-						System.out.println("Addition is: "+result);
-					}
-		      else if(count==3)
-					{
-						result=addition.addition(num[0],num[1],num[2]);
-						System.out.println("Addition is: "+result);
-					}
-		      else if(count==4)
-					{
-		    	       result=addition.addition(num[0],num[1],num[2],num[3]);
-						System.out.println("Addition is: "+result);
-					}
-		      else if(count==5)
-					{
-		    	       result=addition.addition(num[0],num[1],num[2],num[3],num[4]);
-						System.out.println("Addition is: "+result);
-					}
-				 }break;
-		case 2:
-		{
-			CalSubstraction substraction;
-			substraction=new CalSubstraction();
-			   if(count==2)
-					{
-				        result=substraction.substraction(num[0],num[1]);
-						System.out.println("Substraction is: "+result);
-					}
-			   else if(count==3)
-			     {
-				        result=substraction.substraction(num[0],num[1],num[2]);
-						System.out.println("Substraction is: "+result);
-			     }
-			   else if(count==4)
-			     {
-				         result=substraction.substraction(num[0],num[1],num[2],num[3]);
-						System.out.println("Substraction is: "+result);
-			     }
-			   else if(count==5)
-			     {      
-				        result=substraction.substraction(num[0],num[1],num[2],num[3],num[4]);
-						System.out.println("Substraction is: "+result);
-			      }
-		    }break;
-	
-		case 3:
-		{
-			CalMultiplication multiplication;
-			multiplication=new CalMultiplication();
-			
-		   if(count==2)
-			{
-			    result=multiplication.multiplication(num[0], num[1]);
-				System.out.println("Multiplication is: "+result);
-			}
-		   else if(count==3)
-			{
-			   result=multiplication.multiplication(num[0], num[1],num[2]);
-				System.out.println("Multiplication is: "+result);
-			}
-		   else if(count==4)
-			{
-			   result=multiplication.multiplication(num[0], num[1],num[2],num[3]);
-				System.out.println("Multiplication is: "+result);
-			}
-		   else if(count==5)
-			{
-			   result=multiplication.multiplication(num[0], num[1],num[2],num[3],num[4]);
-				System.out.println("Multiplication is: "+result);
-			}
-		}break;
-		
-		default:
-			System.out.println("Invalid Input");			
-	    
-      }
 	}
+
 }
 
 

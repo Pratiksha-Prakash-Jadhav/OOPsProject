@@ -5,7 +5,7 @@ public class CalSubstraction extends Calculator {
 	@Override
 	public int substraction(int a, int b) {
 		// TODO Auto-generated method stub
-		return super.substraction(a, b);
+		return a+b;
 	}
 
 	public int substraction(int a,int b,int c)

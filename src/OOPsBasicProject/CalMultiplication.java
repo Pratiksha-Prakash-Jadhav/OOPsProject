@@ -5,7 +5,7 @@ public class CalMultiplication extends Calculator {
 	@Override
 	public int multiplication(int a, int b) {
 		// TODO Auto-generated method stub
-		return super.multiplication(a, b);
+		return a*b;
 	}
 
 	public int multiplication(int a,int b,int c)
@@ -23,6 +23,5 @@ public class CalMultiplication extends Calculator {
 		return a*b*c*d*e;
 	}
 
-//	Calculator c;
-//	((CalAddition)c).addition(tem[0], result, choice, count, result)
+
 }
